@@ -1,9 +1,9 @@
 package main
 
 import (
-	pb "RusProfileProject/proto"
 	"context"
 	"fmt"
+	pb "rusprofileproject/proto"
 
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/grpclog"

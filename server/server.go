@@ -1,9 +1,9 @@
 package main
 
 import (
-	pb "RusProfileProject/proto"
 	"context"
 	"net"
+	pb "rusprofileproject/proto"
 
 	"github.com/gocolly/colly"
 	"google.golang.org/grpc"
