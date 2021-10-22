@@ -3,7 +3,8 @@ package main
 import (
 	"context"
 	"net"
-	pb "rusprofileproject/proto"
+
+	pb "../proto"
 
 	"github.com/gocolly/colly"
 	"google.golang.org/grpc"
@@ -18,7 +19,7 @@ func main() {
 	}
 	opts := []grpc.ServerOption{}
 	GrpcServer := grpc.NewServer(opts...)
-	server := &pb.RusProfileServiceServer{}
+	server := pb.RusProfileServiceServer{}
 	pb.RegisterRusProfileServiceServer(GrpcServer, &server{})
 	GrpcServer.Serve(listener)
 }
