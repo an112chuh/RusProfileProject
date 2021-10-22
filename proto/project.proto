@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+import "google/api/annotations.proto";
+
+option go_package = "/proto";
+
+package ProfileRus;
+
+service RusProfileService{
+    rpc GetDataByINN (INNRequest) returns (UserData) {
+        option (google.api.http) = {
+            post: "/inn"
+            body: "*"
+        };
+    }
+}
+
+message INNRequest{
+    string INN = 1;
+}
+
+message UserData{
+    string INN = 1;
+    string KPP = 2;
+    string Name = 3;
+    string HeadName = 4;    
+}
