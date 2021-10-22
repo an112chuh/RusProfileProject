@@ -1,8 +1,11 @@
+# github.com/89z/mech v1.35.8
+## explicit; go 1.17
+github.com/89z/mech
 # github.com/PuerkitoBio/goquery v1.7.1
 ## explicit; go 1.13
 github.com/PuerkitoBio/goquery
-# github.com/andybalholm/cascadia v1.2.0
-## explicit; go 1.13
+# github.com/andybalholm/cascadia v1.3.1
+## explicit; go 1.16
 github.com/andybalholm/cascadia
 # github.com/antchfx/htmlquery v1.2.4
 ## explicit; go 1.14
@@ -34,7 +37,7 @@ github.com/gocolly/colly/storage
 # github.com/golang/glog v1.0.0
 ## explicit; go 1.11
 github.com/golang/glog
-# github.com/golang/groupcache v0.0.0-20200121045136-8c9f03a8e57e
+# github.com/golang/groupcache v0.0.0-20210331224755-41bb18bfe9da
 ## explicit
 github.com/golang/groupcache/lru
 # github.com/golang/protobuf v1.5.2
@@ -72,15 +75,19 @@ github.com/grpc-ecosystem/grpc-gateway/utilities
 # github.com/kennygrant/sanitize v1.2.4
 ## explicit
 github.com/kennygrant/sanitize
-# github.com/kr/pretty v0.1.0
+# github.com/kr/pretty v0.3.0
+## explicit; go 1.12
+# github.com/kr/text v0.2.0
 ## explicit
+# github.com/rogpeppe/go-internal v1.6.1
+## explicit; go 1.11
 # github.com/saintfish/chardet v0.0.0-20120816061221-3af4cd4741ca
 ## explicit
 github.com/saintfish/chardet
 # github.com/temoto/robotstxt v1.1.2
 ## explicit; go 1.11
 github.com/temoto/robotstxt
-# golang.org/x/net v0.0.0-20210614182718-04defd469f4e
+# golang.org/x/net v0.0.0-20211020060615-d418f374d309
 ## explicit; go 1.17
 golang.org/x/net/context
 golang.org/x/net/html
@@ -92,12 +99,12 @@ golang.org/x/net/http2/hpack
 golang.org/x/net/idna
 golang.org/x/net/internal/timeseries
 golang.org/x/net/trace
-# golang.org/x/sys v0.0.0-20210510120138-977fb7262007
+# golang.org/x/sys v0.0.0-20211020174200-9d6173849985
 ## explicit; go 1.17
 golang.org/x/sys/internal/unsafeheader
 golang.org/x/sys/unix
-# golang.org/x/text v0.3.6
-## explicit; go 1.11
+# golang.org/x/text v0.3.7
+## explicit; go 1.17
 golang.org/x/text/encoding
 golang.org/x/text/encoding/charmap
 golang.org/x/text/encoding/htmlindex
@@ -118,7 +125,7 @@ golang.org/x/text/secure/bidirule
 golang.org/x/text/transform
 golang.org/x/text/unicode/bidi
 golang.org/x/text/unicode/norm
-# google.golang.org/appengine v1.6.6
+# google.golang.org/appengine v1.6.7
 ## explicit; go 1.11
 google.golang.org/appengine/internal
 google.golang.org/appengine/internal/base
@@ -220,8 +227,8 @@ google.golang.org/protobuf/types/known/structpb
 google.golang.org/protobuf/types/known/timestamppb
 google.golang.org/protobuf/types/known/wrapperspb
 google.golang.org/protobuf/types/pluginpb
-# gopkg.in/check.v1 v1.0.0-20180628173108-788fd7840127
-## explicit
-# gopkg.in/yaml.v2 v2.2.3
-## explicit
+# gopkg.in/check.v1 v1.0.0-20201130134442-10cb98267c6c
+## explicit; go 1.11
+# gopkg.in/yaml.v2 v2.4.0
+## explicit; go 1.15
 gopkg.in/yaml.v2

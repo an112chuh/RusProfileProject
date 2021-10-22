@@ -3,6 +3,7 @@ module github.com/an112chuh/rusprofileproject
 go 1.17
 
 require (
+	github.com/89z/mech v1.35.8
 	github.com/gocolly/colly v1.2.0
 	github.com/golang/protobuf v1.5.2
 	github.com/grpc-ecosystem/grpc-gateway v1.16.0

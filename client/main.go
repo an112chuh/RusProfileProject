@@ -25,7 +25,8 @@ func main() {
 	}
 	defer conn.Close()
 	var INN string
-	INN = "7816566611"
+	fmt.Print("Enter INN: ")
+	fmt.Scan(&INN)
 	Client := pb.NewRusProfileServiceClient(conn)
 	Request := &pb.INNRequest{
 		INN: INN,
