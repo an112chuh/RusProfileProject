@@ -2,9 +2,10 @@ package main
 
 import (
 	"context"
+	"fmt"
 	"net"
 
-	pb "../proto"
+	pb "github.com/an112chuh/rusprofileproject/proto"
 
 	"github.com/gocolly/colly"
 	"google.golang.org/grpc"
@@ -19,7 +20,7 @@ func main() {
 	}
 	opts := []grpc.ServerOption{}
 	GrpcServer := grpc.NewServer(opts...)
-	server := pb.RusProfileServiceServer{}
+	//	var server pb.&RusProfileServiceServer;
 	pb.RegisterRusProfileServiceServer(GrpcServer, &server{})
 	GrpcServer.Serve(listener)
 }
@@ -33,20 +34,23 @@ func (s *server) GetDataByINN(c context.Context, request *pb.INNRequest) (*pb.Us
 	response = new(pb.UserData)
 	var FinalURL string
 	FinalURL = URL + request.INN
-	collector := colly.NewCollector(
-		colly.AllowedDomains(FinalURL),
-	)
+	fmt.Println(FinalURL)
+	collector := colly.NewCollector()
 	collector.OnHTML("span#clip_inn", func(e *colly.HTMLElement) {
 		response.INN = e.Text
+		fmt.Println(response.INN)
 	})
 	collector.OnHTML("span#clip_kpp", func(e *colly.HTMLElement) {
 		response.KPP = e.Text
+		fmt.Println(response.KPP)
 	})
 	collector.OnHTML("company-name", func(e *colly.HTMLElement) {
 		response.Name = e.Text
+		fmt.Println(response.Name)
 	})
 	collector.OnHTML("span#company-info__text", func(e *colly.HTMLElement) {
 		response.HeadName = e.Text
+		fmt.Println(response.HeadName)
 	})
 	return response, nil
 }

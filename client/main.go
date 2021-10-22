@@ -4,8 +4,10 @@ import (
 	"context"
 	"fmt"
 
-	pb "../proto"
-
+	pb "github.com/an112chuh/rusprofileproject/proto"
+	"github.com/golang/protobuf/descriptor"
+	"github.com/grpc-ecosystem/grpc-gateway/runtime"
+	_ "google.golang.org/genproto/googleapis/api/annotations"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/grpclog"
 )
@@ -14,7 +16,7 @@ type userData struct {
 	INN, KPP, name, HeadName string
 }
 
-var address string = "127.0.0.1:8080"
+var address string = "127.0.0.1:5300"
 
 func main() {
 	conn, err := grpc.Dial(address, grpc.WithInsecure())
@@ -23,11 +25,13 @@ func main() {
 	}
 	defer conn.Close()
 	var INN string
-	INN = "4285493738"
+	INN = "7816566611"
 	Client := pb.NewRusProfileServiceClient(conn)
 	Request := &pb.INNRequest{
 		INN: INN,
 	}
+	var _ = descriptor.ForMessage
+	var _ = runtime.String
 	var result, err1 = Client.GetDataByINN(context.Background(), Request)
 	if err1 != nil {
 		grpclog.Fatalf("fail to dial: %v", err)
